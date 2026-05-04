@@ -11,7 +11,7 @@ class Usuario(Base):
     __tablename__ = "usuarios"
 
     id = Column(Integer, primary_key=True)
-    emal = Column(String(100), unique=True, nullable=False)
+    email = Column(String(100), unique=True, nullable=False)
     senha = Column(String(100), nullable=False)
 
 # Carregar as variáveis de ambiente
