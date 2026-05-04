@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4facfe;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00c6ff;
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4facfe;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            Email:
+            <input type="email" name="email" required>
+
+            Senha:
+            <input type="password" name="senha" required>
+
+            <button type="submit">Logar</button>
+        </form>
+        {% if erro %}
+            <p style="color: rgb(250, 0, 187);">{{erro}}</p>
+        {% endif %}
+        <a href="/cadastro">Criar conta</a>
+    </div>
+</body>
+
+</html>
